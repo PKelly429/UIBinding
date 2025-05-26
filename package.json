@@ -1,6 +1,6 @@
 {
   "name": "com.paulkelly.uibinding",
-  "version": "1.0",
+  "version": "1.0.0",
   "displayName": "UIBinding",
   "description": "This is package for creating bindings in uGUI",
   "unity": "6.0",
