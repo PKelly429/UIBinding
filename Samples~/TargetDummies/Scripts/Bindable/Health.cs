@@ -2,6 +2,7 @@ using System;
 using System.Collections.Generic;
 using DataBinding;
 using DataBinding.Sample;
+using PrimeTween;
 using UnityEngine;
 
 [Bindable]
@@ -32,6 +33,11 @@ public class Health : MonoBehaviour
     {
         currentHealth.SetValue(maxHealth);
         isAlive.SetValue(true);
+        if (!UIReferences.Instance)
+        {
+            Tween.Delay(0.1f).OnComplete(() => UIReferences.Instance.healthBarPool.Bind(this));
+            return;
+        }
         UIReferences.Instance.healthBarPool.Bind(this);
     }
 
