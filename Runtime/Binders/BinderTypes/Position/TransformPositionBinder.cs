@@ -21,6 +21,7 @@ namespace DataBinding
         {
             _mainCamera = Camera.main;
 
+            if(!canvas) TryToFindCanvas();
             if (!canvas)
             {
 #if DEBUG
@@ -39,6 +40,11 @@ namespace DataBinding
             if(_isRegistered) return;
             BinderUpdater.Register(this);
             _isRegistered = true;
+        }
+
+        private void TryToFindCanvas()
+        {
+            canvas = target.GetComponentInParent<Canvas>().GetComponent<RectTransform>();
         }
 
         protected override void OnUnbind()

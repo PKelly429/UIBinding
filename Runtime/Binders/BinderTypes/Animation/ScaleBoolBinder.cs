@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace DataBinding
 {
-    [Binder("Scale based on Boolean", "Animation")]
+    [Binder("Scale: Boolean", "Animation")]
     public class ScaleBoolBinder : AbstractBinder<bool>
     {
         [SerializeField] private RectTransform target;

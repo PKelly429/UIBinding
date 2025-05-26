@@ -1,6 +1,6 @@
 {
   "name": "com.paulkelly.uibinding",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "displayName": "UIBinding",
   "description": "This is a package for creating bindings in uGUI",
   "unity": "2023.1",
@@ -16,6 +16,11 @@
       "displayName": "Simple Health Bar",
       "description": "Contains a simple setup binding a health value to a health bar",
       "path": "Samples~/SimpleHealthBar"
+    },
+    {
+      "displayName": "Target Dummies",
+      "description": "Shows how to setup a pool of binders that follow in game objects",
+      "path": "Samples~/TargetDummies"
     }
   ]
 }

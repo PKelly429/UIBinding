@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace DataBinding
 {
-    [Binder("Active based on Boolean", "Game Object")]
+    [Binder("Active: Boolean", "Game Object")]
     public class GameObjectBoolBinder : AbstractBinder<bool>
     {
         [SerializeField] private GameObject target;

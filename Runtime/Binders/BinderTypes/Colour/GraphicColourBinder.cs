@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 namespace DataBinding
 {
-    [Binder("Graphic Colour", "Colour")]
+    [Binder("Colour", "Colour")]
     public class GraphicColourBinder : AbstractBinder<Color>
     {
         [SerializeField] private Graphic target;

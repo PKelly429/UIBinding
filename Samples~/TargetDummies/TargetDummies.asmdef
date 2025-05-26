@@ -1,0 +1,17 @@
+{
+    "name": "TargetDummies",
+    "rootNamespace": "",
+    "references": [
+        "GUID:605640b94a7c8c04093137396db84b07",
+        "GUID:75469ad4d38634e559750d17036d5f7c"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

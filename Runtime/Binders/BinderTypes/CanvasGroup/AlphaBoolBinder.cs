@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace DataBinding
 {
-    [Binder("Alpha based on Boolean", "Alpha")]
+    [Binder("Alpha: Boolean", "Alpha")]
     public class AlphaBoolBinder : AbstractBinder<bool>
     {
         [SerializeField] private CanvasGroup target;

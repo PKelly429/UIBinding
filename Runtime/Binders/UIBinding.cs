@@ -10,7 +10,7 @@ namespace DataBinding
         public BindingType bindingType;
         [SerializeReference] public List<AbstractBinder> binders;
 
-        public void Bind(Object obj)
+        public void Bind(object obj)
         {
             foreach (var binder in binders)
             {

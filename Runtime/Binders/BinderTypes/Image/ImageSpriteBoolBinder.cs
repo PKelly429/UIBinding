@@ -3,7 +3,7 @@ using UnityEngine.UI;
 
 namespace DataBinding
 {
-    [Binder("Sprite based on Boolean", "Image")]
+    [Binder("Sprite: Boolean", "Image")]
     public class ImageSpriteBoolBinder : AbstractBinder<bool>
     {
         [SerializeField] private Image target;
