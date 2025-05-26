@@ -6,6 +6,9 @@
   "unity": "6000.0",
   "unityRelease": "26f1",
   "documentationUrl": "https://github.com/PKelly429/UIBinding",
+  "dependencies": {
+    "com.kyrylokuzyk.primetween": "1.3.2"
+  },
   "author": {
     "name": "Paul Kelly"
   }
