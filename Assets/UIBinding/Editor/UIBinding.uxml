@@ -1,0 +1,12 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" editor-extension-mode="False">
+    <Style src="project://database/Assets/UIBinding/Editor/BaseStyle.uss?fileID=7433441132597879392&amp;guid=00db1b5a241c53a41971afe81886dc83&amp;type=3#BaseStyle" />
+    <ui:VisualElement name="root" class="ui-binding" style="flex-grow: 1;">
+        <ui:Label text="UI Binding" name="header" class="ui-binding-header ui-binding-title" />
+        <ui:VisualElement name="break" class="ui-binding-break" style="flex-grow: 1;" />
+        <ui:VisualElement name="content" style="flex-grow: 1;">
+            <ui:VisualElement name="break" class="ui-binding-break" style="flex-grow: 1;" />
+            <ui:ListView name="bindings" data-source-type="DataBinding.AbstractBindableVariable, DataBinding" />
+        </ui:VisualElement>
+        <ui:VisualElement name="break" class="ui-binding-break" style="flex-grow: 1;" />
+    </ui:VisualElement>
+</ui:UXML>
