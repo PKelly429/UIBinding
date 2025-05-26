@@ -83,3 +83,16 @@ private void Update()
 ```
 
 ![healthbarupdate](https://github.com/user-attachments/assets/d3be5da2-6459-4c8c-bb78-7ebd35b52cfa)
+
+## Binding Types
+
+### String Binders
+
+Using the 'Complex Text: TMP' binder, we can setup text fields with a formatted string where the parameters are bound. Use `{0}` `{1}` etc, in the formatted string to add parameters.
+
+
+![image](https://github.com/user-attachments/assets/6585da46-590a-4376-b3f3-1e931dc1c2c2)
+
+![healthbarupdate2](https://github.com/user-attachments/assets/ccbef703-2504-4158-a19a-83a1c9d858c4)
+
+
