@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "displayName": "UIBinding",
   "description": "This is package for creating bindings in uGUI",
-  "unity": "6.0",
+  "unity": "6000.0",
   "unityRelease": "26f1",
   "documentationUrl": "https://github.com/PKelly429/UIBinding",
   "author": {
