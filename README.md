@@ -102,4 +102,12 @@ Using the 'Complex Text: TMP' binder, we can setup text fields with a formatted 
 
 ![healthbarupdate2](https://github.com/user-attachments/assets/ccbef703-2504-4158-a19a-83a1c9d858c4)
 
+### Follow Transform
+
+The Follow Transform binder can make the UI follow an in world object, and can be used to easily create status tags, floating health bars or tooltips.
+
+![image](https://github.com/user-attachments/assets/9faec676-5d69-4ab3-801e-dd3bf9b95e09)
+
+![image](https://github.com/user-attachments/assets/6e79636d-d56f-4901-a8bc-8a8a2f538201)
+
 
