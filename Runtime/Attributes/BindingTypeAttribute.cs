@@ -11,4 +11,8 @@ namespace DataBinding
             bindingType = type;
         }
     }
+
+    public class BindableMethodAttribute : PropertyAttribute
+    {
+    }
 }

@@ -1,3 +1,6 @@
+## [1.0.4] - 01-06-2025
+### Adding Button bindings
+
 ## [1.0.3] - 26-05-2025
 ### Fix for race condition on startup in Target Dummies sample
 

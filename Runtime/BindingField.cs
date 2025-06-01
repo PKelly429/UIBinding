@@ -1,4 +1,5 @@
 using System;
+using System.Reflection;
 using UnityEngine;
 
 namespace DataBinding
@@ -31,6 +32,27 @@ namespace DataBinding
             {
                 throw new ArgumentException("BindingField property does not exist.");
             }
+        }
+
+        public Delegate GetBindingMethod(object obj, Type bindingType)
+        {
+            if (string.IsNullOrEmpty(property))
+            {
+                throw new ArgumentException("BindingField does not have property");
+            }
+
+            try
+            {
+                return bindingType.GetMethod(property).CreateDelegate(typeof(Action), obj);
+            }
+            catch (TargetParameterCountException e)
+            {
+                #if DEBUG
+                Debug.LogError($"Caught Exception while trying to bind method {bindingType.Name}.{property}: Cannot bind methods that require parameters.");
+                #endif
+            }
+
+            return null;
         }
         
 #if UNITY_EDITOR

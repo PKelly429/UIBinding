@@ -14,6 +14,7 @@ namespace DataBinding.Editor
 
         private bool _hasRequiredType;
         private string _requiredType;
+        private bool _isMethodBindable;
 
         protected virtual void Initialize(SerializedProperty bindingType, SerializedProperty targetProperty)
         {
@@ -36,11 +37,12 @@ namespace DataBinding.Editor
                     {
                         //var attributes = targetProperty.GetAttributes<BindingTypeAttribute>(false);
                         var fieldInfo = GetFieldInfo(targetProperty);
-                        BindingTypeAttribute attribute = fieldInfo.GetCustomAttribute<BindingTypeAttribute>(false);
-                        if (attribute != null)
+                        BindingTypeAttribute typeAttribute = fieldInfo.GetCustomAttribute<BindingTypeAttribute>(false);
+                        BindableMethodAttribute methodAttribute = fieldInfo.GetCustomAttribute<BindableMethodAttribute>(false);
+                        if (typeAttribute != null)
                         {
-                            SetRequiredType(attribute.bindingType);
-                            if (attribute.bindingType == typeof(Enum))
+                            SetRequiredType(typeAttribute.bindingType);
+                            if (typeAttribute.bindingType == typeof(Enum))
                             {
                                 _targetNames = type.GetFields().Where(t => typeof(AbstractBindableVariable).IsAssignableFrom(t.FieldType))
                                     .Where(t => t.FieldType.BaseType.IsGenericType && t.FieldType.BaseType.GetGenericTypeDefinition() == typeof(BindableEnum<>))
@@ -49,8 +51,14 @@ namespace DataBinding.Editor
                             }
                             else
                             {
-                                targetType = typeof(BindableVariable<>).MakeGenericType(attribute.bindingType);
+                                targetType = typeof(BindableVariable<>).MakeGenericType(typeAttribute.bindingType);
                             }
+                        }
+                        else if (methodAttribute != null)
+                        {
+                            _isMethodBindable = true;
+                            _targetNames = type.GetMethods().Where(t => t.GetCustomAttribute<BindableAttribute>() != null).Select(t => t.Name).ToArray();
+                            return;
                         }
                     }
                     catch (Exception e)
@@ -84,7 +92,15 @@ namespace DataBinding.Editor
                 {
                     EditorGUI.LabelField(position, "Binding Field","No Matching Fields");
 
-                    string helpMessage = _hasRequiredType ? $"Has Required Type:\nBinds to fields of type {_requiredType}" : "Add fields extending from BindableVariable<T>\n e.g. BindableFloat";
+                    string helpMessage = string.Empty;
+                    if (_isMethodBindable)
+                    {
+                        helpMessage = "Binds to Method : Add [Bindable] attribute to the method you wish to bind.";
+                    }
+                    else
+                    {
+                        helpMessage = _hasRequiredType ? $"Has Required Type:\nBinds to fields of type {_requiredType}" : "Add fields extending from BindableVariable<T>\n e.g. BindableFloat";   
+                    }
                     position = GUILayoutUtility.GetRect(new GUIContent(helpMessage), EditorStyles.helpBox);
                     EditorGUI.HelpBox(position, helpMessage, MessageType.Info);
                     
