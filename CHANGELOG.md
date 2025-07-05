@@ -1,3 +1,6 @@
+## [1.0.6] - 05-07-2025
+### Adding Bindable Timer type
+
 ## [1.0.5] - 05-07-2025
 ### Use unscaled time for all tweens
 
