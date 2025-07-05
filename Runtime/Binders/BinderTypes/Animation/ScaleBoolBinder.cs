@@ -30,7 +30,7 @@ namespace DataBinding
         {
             bool value = bindableVariable.GetValue();
             
-            Tween.Scale(target, value ? trueScale : falseScale, scaleTime);
+            Tween.Scale(target, value ? trueScale : falseScale, scaleTime, useUnscaledTime: true);
         }
     }
 }

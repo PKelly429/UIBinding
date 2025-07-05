@@ -24,7 +24,7 @@ namespace DataBinding
             Color targetColour = bindableVariable.GetValue() ? trueColour : falseColour;
             if (smoothValue)
             {
-                Tween.Color(target, targetColour, smoothTime);
+                Tween.Color(target, targetColour, smoothTime, useUnscaledTime: true);
             }
             else
             {

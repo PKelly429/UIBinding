@@ -21,7 +21,7 @@ namespace DataBinding
         {
             bool value = bindableVariable.GetValue();
             if (invert) value = !value;
-            Tween.Alpha(target, value ? 1 : 0, fadeTime);
+            Tween.Alpha(target, value ? 1 : 0, fadeTime, useUnscaledTime: true);
         }
     }
 }

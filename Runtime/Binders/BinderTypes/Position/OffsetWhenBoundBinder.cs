@@ -25,12 +25,12 @@ namespace DataBinding
                 _initalPosition = target.localPosition;
                 _initalPositionSet = true;
             }
-            Tween.LocalPosition(target, _initalPosition+boundOffset, moveTime, _ease);
+            Tween.LocalPosition(target, _initalPosition+boundOffset, moveTime, _ease, useUnscaledTime: true);
         }
 
         protected override void OnUnbind()
         {
-            Tween.LocalPosition(target, _initalPosition-boundOffset, moveTime, _ease);
+            Tween.LocalPosition(target, _initalPosition-boundOffset, moveTime, _ease, useUnscaledTime: true);
         }
 
         protected override void OnBindingValueChanged()

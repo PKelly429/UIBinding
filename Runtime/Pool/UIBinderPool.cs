@@ -32,7 +32,7 @@ namespace DataBinding
             {
                 var binder = _activeBindings[obj];
                 binder.Unbind();
-                Tween.Delay(releaseDelay).OnComplete(() => _pool.Release(binder));
+                Tween.Delay(releaseDelay, useUnscaledTime: true).OnComplete(() => _pool.Release(binder));
                 _activeBindings.Remove(obj);
             }
         }

@@ -20,7 +20,7 @@ namespace DataBinding
         {
             if (smoothValue)
             {
-                Tween.Color(target, bindableVariable.GetValue(), smoothTime);
+                Tween.Color(target, bindableVariable.GetValue(), smoothTime, useUnscaledTime: true);
             }
             else
             {

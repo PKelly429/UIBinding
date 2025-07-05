@@ -22,7 +22,7 @@ namespace DataBinding
         protected override void OnBindingValueChanged()
         {
             _currentTween.Stop();
-            _currentTween = Tween.Alpha(target, 1, fadeTime).Chain(Tween.Alpha(target, 0, fadeTime, startDelay:duration));
+            _currentTween = Tween.Alpha(target, 1, fadeTime, useUnscaledTime: true).Chain(Tween.Alpha(target, 0, fadeTime, startDelay:duration));
         }
     }
 }

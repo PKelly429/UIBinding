@@ -66,7 +66,7 @@ namespace DataBinding
         {
             if (smoothValue)
             {
-                Tween.UIFillAmount(target, GetValue(), smoothTime);
+                Tween.UIFillAmount(target, GetValue(), smoothTime, useUnscaledTime: true);
             }
             else
             {

@@ -1,3 +1,6 @@
+## [1.0.5] - 05-07-2025
+### Use unscaled time for all tweens
+
 ## [1.0.4] - 01-06-2025
 ### Adding Button bindings
 

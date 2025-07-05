@@ -17,12 +17,12 @@ namespace DataBinding
         
         protected override void OnBind()
         {
-            Tween.Scale(target, boundScale, scaleTime);
+            Tween.Scale(target, boundScale, scaleTime, useUnscaledTime: true);
         }
 
         protected override void OnUnbind()
         {
-            Tween.Scale(target, unboundScale, scaleTime);
+            Tween.Scale(target, unboundScale, scaleTime, useUnscaledTime: true);
         }
 
         protected override void OnBindingValueChanged()

@@ -17,7 +17,7 @@ namespace DataBinding
 
         protected override void OnBindingValueChanged()
         {
-            Tween.PunchScale(target, strengthVector * strength, duration);
+            Tween.PunchScale(target, strengthVector * strength, duration, useUnscaledTime: true);
         }
     }
 }

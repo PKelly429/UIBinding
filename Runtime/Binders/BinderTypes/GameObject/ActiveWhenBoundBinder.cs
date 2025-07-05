@@ -23,7 +23,7 @@ namespace DataBinding
             _currentTween.Stop();
             if (disableDelay > 0)
             {
-                _currentTween = Tween.Delay(target, disableDelay).OnComplete(() => target.SetActive(false));
+                _currentTween = Tween.Delay(target, disableDelay, useUnscaledTime: true).OnComplete(() => target.SetActive(false));
             }
             else
             {
