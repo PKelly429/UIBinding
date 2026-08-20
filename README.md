@@ -11,7 +11,7 @@ The Package was built in Unity 6, and requires UIToolkit inspectors for the Edit
 The tweens / animations depend on PrimeTween, get it for free: [Asset Store](https://api.unity.com/v1/oauth2/authorize?client_id=asset_store_v2&locale=en_GB&redirect_uri=https%3A%2F%2Fassetstore.unity.com%2Fauth%2Fcallback%3Fredirect_to%3D%252Fpackages%252Ftools%252Fanimation%252Fprimetween-high-performance-animations-and-sequences-252960&response_type=code&state=1a59d344-366a-4902-9702-4135d54fac77) [Github](https://github.com/KyryloKuzyk/PrimeTween?tab=readme-ov-file#install-via-unity-package-manager-upm)
 
 
-In the package manager, select 'Install Package from Git URL' and use the url `https://github.com/PKelly429/UIBinding.git`
+In the package manager, select 'Install Package from Git URL' and use the url `https://github.com/paulkelly/UIBinding.git`
 
 ### Bindable Object
 
